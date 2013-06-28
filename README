@@ -2,3 +2,6 @@ Timezone Module for Puppet
 ------------------------
 mv_timezone
 
+Tested with 
+- Ubuntu 12.04
+
