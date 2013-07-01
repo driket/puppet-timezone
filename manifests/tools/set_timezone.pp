@@ -1,9 +1,10 @@
-define mv_timezone::tools::set_timezone($config_file = $mv_timezone::params::config_path, $timezone = "Etc/UTC") {
+define mv_timezone::tools::set_timezone($timezone_config = $mv_timezone::params::$timezone_config_path,
+		 																		$timezone = "Etc/UTC") {
 	
 	require('mv_timezone')
 	require('mv_timezone::packages')
 	
-	file { "${config_file}":
+	file { "${timezone_config}":
 		ensure => file,
         #content => template("mv_timezone/timezone.erb"),
 		content => "$timezone\n",
