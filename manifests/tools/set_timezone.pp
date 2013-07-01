@@ -1,4 +1,4 @@
-define mv_timezone::tools::set_timezone($timezone_config = $mv_timezone::params::$timezone_config_path,
+define mv_timezone::tools::set_timezone($timezone_config = $mv_timezone::params::timezone_config_path,
 		 																		$timezone = "Etc/UTC") {
 	
 	require('mv_timezone')
