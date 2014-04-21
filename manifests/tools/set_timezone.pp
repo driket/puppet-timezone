@@ -11,7 +11,7 @@ define mv_timezone::tools::set_timezone($timezone_config = $mv_timezone::params:
         mode 	=> "0644",
         owner 	=> 'root',
         group 	=> 'root',
-		require => Package['mv_timezone'],
+		require => Package["tzdata", "language-pack-fr"],
 		notify => Exec['mv_timezone_setup'],
 	}
 	
